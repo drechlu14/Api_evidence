@@ -1,0 +1,26 @@
+﻿<Page x:Class="Apina.Pages.EditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Apina.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="DetailEvidenceOsob" Height="500" Width="900" MaxHeight="500" MaxWidth="900" MinHeight="500" MinWidth="900">
+
+    <Grid Width="900" Height="500">
+        <Label x:Name="Name_label" Content="Jméno:" HorizontalAlignment="Center" Margin="10,10,839,465" FontWeight="Bold" RenderTransformOrigin="-2.003,0.379"/>
+        <TextBox x:Name="Name" TextWrapping="Wrap" Margin="66,10,736,465"/>
+        <Label x:Name="SurName_label" Content="Příjmení:" HorizontalAlignment="Center" FontWeight="Bold" Margin="169,10,671,465"/>
+        <TextBox x:Name="SurName" Height="23" TextWrapping="Wrap" Margin="234,10,568,467" RenderTransformOrigin="0.507,0.348"/>
+        <Label x:Name="RodneCislo_label" Content="Rodné číslo:" HorizontalAlignment="Center" FontWeight="Bold" Margin="10,69,812,404"/>
+        <TextBox x:Name="RodneCislo1" Height="23" TextWrapping="Wrap" Width="150" HorizontalAlignment="Left" Margin="93,74,0,403" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="RodneCislo2" Height="23" TextWrapping="Wrap" Width="84" HorizontalAlignment="Right" Margin="0,74,568,403"/>
+        <Label x:Name="BirthDate_label" Content="Datum Narození:" HorizontalAlignment="Center" FontWeight="Bold" Margin="10,40,784,431"/>
+        <DatePicker x:Name="BirthDate" Margin="121,40,568,431"/>
+
+        <Button Click="UpdateButton_Click" x:Name="UpdateButton"  Content="Upravit" Margin="10,115,736,355" />
+        <Button Click="DeleteButton_Click" x:Name="Delete"  Content="Smazat" Margin="183,115,568,355" />
+        <Button Click="BackButton_Click" x:Name="BackButton"  Content="Zpět" Margin="790,10,10,465" />
+    </Grid>
+</Page>

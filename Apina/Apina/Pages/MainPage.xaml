@@ -1,0 +1,35 @@
+﻿<Page x:Class="Apina.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Apina.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="MainPage"  Height="500" Width="900" MaxHeight="500" MaxWidth="900" MinHeight="500" MinWidth="900">
+
+    <Grid Width="900" Height="500">
+        <ListView x:Name="listview" Margin="357,0,0,10" Height="435" Width="533" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Padding="10,5" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="MouseDoubleClick" Handler="listViewItem_MouseDoubleClick" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <Label x:Name="label1" Content="Jméno:" HorizontalAlignment="Center" Margin="10,10,839,465" FontWeight="Bold" RenderTransformOrigin="-2.003,0.379"/>
+        <TextBox x:Name="Name" TextWrapping="Wrap" Margin="66,10,736,465"/>
+        <Label x:Name="label3" Content="Příjmení:" HorizontalAlignment="Center" FontWeight="Bold" Margin="169,10,671,465"/>
+        <TextBox x:Name="SurName" Height="23" TextWrapping="Wrap" Margin="234,10,568,467" RenderTransformOrigin="0.507,0.348"/>
+        <Label x:Name="label5" Content="Rodné číslo:" HorizontalAlignment="Center" FontWeight="Bold" Margin="10,69,812,404"/>
+        <TextBox x:Name="RodneCislo1" Height="23" TextWrapping="Wrap" Width="150" HorizontalAlignment="Left" Margin="93,74,0,403" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="RodneCislo2" Height="23" TextWrapping="Wrap" Width="84" HorizontalAlignment="Right" Margin="0,74,568,403"/>
+        <Label x:Name="label5_copy" Content="Datum Narození:" HorizontalAlignment="Center" FontWeight="Bold" Margin="10,40,784,431"/>
+        <DatePicker x:Name="BirthDate" Margin="121,40,568,431"/>
+
+        <Button x:Name="button" Content="Vytvořit" Margin="10,102,568,356" VerticalAlignment="Center" Height="42" Click="button_Click"/>
+        <TextBox x:Name="SearchText" HorizontalAlignment="Left" Height="29" Margin="10,432,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218"/>
+        <Button x:Name="SearchButton" Content="Hledat" HorizontalAlignment="Left" Margin="10,461,0,0" VerticalAlignment="Top" Width="218" Height="29" Click="SearchButton_Click"/>
+        <Label x:Name="label5_copy_Copy1" Content="Pro detail osoby 2x klikněte" HorizontalAlignment="Center" FontWeight="Bold" Margin="357,22,287,450" RenderTransformOrigin="0.49,0.424" Width="256"/>
+    </Grid>
+</Page>
+
